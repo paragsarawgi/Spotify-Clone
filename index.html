@@ -4,14 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="roots.css">
     <title>Spotify - Listen to Music anytime, anywhere</title>
 </head>
 <body>
-    <div class="container">
-        <div class="left"></div>
-        <div class="right"></div>
+    <nav>
+        <div class="nav-left">
+            <div id="logo"><i class="fa-brands fa-spotify"></i></div>
+            <div id="home">
+                <div id="home-container">
+                    <i class="fa-regular fa-house"></i>
+                </div>
+            </div>
+            <label id="search" for="search-input">
+                <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                <input type="text" placeholder="What do you wanna play?" id="search-input">
+            </label>
+        </div>
+        <div class="nav-right">
+            <div id="premium"><a href="#">Premium</a></div>
+            <div id="support"><a href="#">Support</a></div>
+            <div id="download"><a href="#">Download</a></div>
+            <div id="login"><a href="#">Log In</a></div>
+        </div>
+    </nav>
+    <div class="container df">
+        <div class="left border"></div>
+        <div class="right border"></div>
     </div>
 </body>
 </html>
