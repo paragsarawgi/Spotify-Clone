@@ -2,15 +2,128 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--mont);
+}
+body {
+    background-color: var(--black-1);
+}
+/* Navbar */
+nav {
+    background-color: var(--black-1);
+    color: var(--white-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+/* Nav Left */
+nav .nav-left {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    gap: 1.5rem;
+}
+nav .nav-left #logo {
+    font-size: var(--logo-size-1);
+    transition: all 0.3s ease;
+}
+nav .nav-left #home #home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: var(--black-3);
+    font-size: var(--logo-size-2);
+    color: var(--white-2);
+    transition: all 0.3s ease;
+}
+nav .nav-left #search {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    background-color: var(--black-3);
+    height: 3rem;
+    width: 460px;
+    transition: all 0.3s ease;
+}
+nav .nav-left #search #search-icon {
+    font-size: var(--logo-size-2);
+    color: var(--white-2);
+    transition: all 0.3s ease;
+}
+nav .nav-left #search input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--white-1);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    width: 100%;
 }
 
-.left {
-    width: 20vw;
-    height: 100vh;
-    background-color: #3b3b3b;
+/* nav left hover */
+nav .nav-left #logo:hover{
+    transform: var(--glow);
+    cursor: pointer;
 }
-.right {
-    width: 80vw;
-    height: 100vh;
-    background-color: rgb(202, 148, 78);
+nav .nav-left #home #home-container:hover {
+    transform: var(--glow);
+    color: var(--white-1);
+    background-color: var(--black-4);
+    cursor: pointer;
+}
+nav .nav-left #search:hover {
+    background-color: var(--black-4);
+    border: 1px solid var(--white-2);
+    cursor: pointer;
+    color: var(--white-1);
+    #search-icon {
+        color: var(--white-1);
+    }
+}
+nav .nav-left #search #search-icon:hover {
+    transform: var(--glow);
+    cursor: pointer;
+}
+nav .nav-left #search:focus-within {
+    border: 2px solid var(--white-1);
+    transition: none;
+}
+
+/* Nav Right */
+nav .nav-right {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    gap: 1rem;
+}
+nav .nav-right a {
+    color: var(--white-2);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block; /* for enabling transform in anchor tags */
+}
+nav .nav-right #login a {
+    padding: 1rem 1.3rem;
+    font-weight: 800;
+    border: 1px solid var(--white-2);
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    color: var(--black-1);
+    background-color: var(--white-1);
+}
+nav .nav-right a:hover {
+    color: var(--white-1);
+    transform: var(--glow);
+    cursor: pointer;
+}
+nav .nav-right #login a:hover {
+    background-color: var(--white-2);
 }

@@ -1,12 +1,19 @@
-.border {
-    border: 1px solid red;
-}
-.df {
-    display: flex;
-}
-.jcc {
-    justify-content: center;
-}
-.aic {
-    align-items: center;
+:root {
+    /* Colors */
+    --black-1: #000000;
+    --black-2: #121212;
+    --black-3: #1f1f1f;
+    --black-4: #2b2b2b;
+    --white-1: #ffffff;
+    --white-2: #b3b3b3;
+
+    /* Font-sizes */
+    --logo-size-1: 2rem;
+    --logo-size-2: 1.5rem;
+
+    /* fonts */
+    --mont: 'Montserrat', sans-serif;
+
+    /* hover effects */
+    --glow: scale(1.05);
 }
