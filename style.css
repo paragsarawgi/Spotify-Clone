@@ -6,6 +6,7 @@
 }
 body {
     background-color: var(--black-1);
+    height: 100vh;
 }
 /* Navbar */
 nav {
@@ -125,5 +126,27 @@ nav .nav-right a:hover {
     cursor: pointer;
 }
 nav .nav-right #login a:hover {
-    background-color: var(--white-2);
+    background-color: var(--white-hover);
+}
+
+/* Main */
+main {
+    display: flex;
+    gap: 1rem;
+    padding: 0.3rem 1.5rem;
+    height: 91vh;
+    color: var(--white-1);
+}
+main .left-box {
+    background-color: var(--black-2);
+    border-radius: 5px;
+    height: 100%;
+    width: 27.5vw;
+
+}
+main .right-box {
+    background-color: var(--black-2);
+    border-radius: 10px;
+    height: 100%;
+    width: 72.5vw;
 }
