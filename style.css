@@ -135,7 +135,7 @@ nav .nav-right #login a:hover {
 main {
     display: flex;
     gap: 1rem;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.5rem;
     height: 91vh;
     color: var(--white-1);
 }
@@ -278,6 +278,8 @@ main .right-box {
     width: 72.5vw;
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* to enable scrolling when content overflows*/
+    scrollbar-color: #ffffff55 transparent;
 }
 /* row heading */
 main .right-box .row h2 {
@@ -300,11 +302,11 @@ main .right-box .row .card-container .card {
     height: 270px;
     transition: all 0.2s ease;    
 }
-/* image-play */
+/* image-play contains card and play icon */
 main .right-box .row .card-container .card .image-play {
     position: relative;/* for positioning the play icon */
-}   
-/* play icon */
+}
+/* card image */
 main .right-box .row .card-container .card .image-play img {
     width: 100%;
     height: 65%;
@@ -312,9 +314,10 @@ main .right-box .row .card-container .card .image-play img {
     border-radius: 5px;
     margin-bottom: 0.5rem;
 }
+/* play icon */
 main .right-box .row .card-container .card #play-icon {
-    width: 45px;
-    height: 45px;
+    width: 48px;
+    height: 48px;
     display: none; 
     background-color: transparent;
     border: none;
@@ -322,15 +325,33 @@ main .right-box .row .card-container .card #play-icon {
     position: absolute;
     bottom: 20px;
     right: 5px;
-    /* name | duration | easing-curve | fill-mode */
-    animation: icon-animation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) forwards;
+    animation: icon-animation 0.35s cubic-bezier(0.21, 1.02, 0.73, 1);
 }
-
-main .right-box .row .card-container .card #play-icon:hover {
+/* play icon hover */
+main .right-box .row .card-container .card #play-icon:hover .spotify-play-svg{
     transform: var(--glow);
     cursor: pointer;
-}   
-
+}
+/* Prep both the dot and the triangle to change colors smoothly */
+main .spotify-play-svg circle,
+main .spotify-play-svg path {
+    transition: fill 0.2s ease;
+}
+main .right-box .row .card-container .card #play-icon:hover .spotify-play-svg circle {
+    fill: var(--green-2); 
+}
+/* play icon animation */
+@keyframes icon-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* card text */
 main .right-box .row .card-container .card h4 {
     font-size: 1rem;
     font-weight: 600;
@@ -346,17 +367,24 @@ main .right-box .row .card-container .card:hover {
     background-color: var(--black-3);
     cursor: pointer;
     #play-icon{
-        display: block; /* show the play icon on hover */
+        display: block;
     }
 }
-/* play icon animation */
-@keyframes icon-animation {
-    0% {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Settles into resting place */
-    }
+
+/* Play Bar */
+#play-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: var(--black-1);
+    border-top: 1px solid var(--white-2);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#play-bar .play-controls button {
+    width: 40px;
+    height: 40px;
 }
