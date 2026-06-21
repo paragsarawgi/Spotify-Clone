@@ -5,6 +5,7 @@
     --black-3: #1f1f1f;
     --black-4: #2b2b2b;
     --white-1: #ffffff;
+    --white-hover: #e6e6e6;
     --white-2: #b3b3b3;
 
     /* Font-sizes */
@@ -16,4 +17,8 @@
 
     /* hover effects */
     --glow: scale(1.05);
+
+    /* buttons */
+    --rounded: 1rem;
+    --btn-pad: 0.5rem 1rem;
 }
