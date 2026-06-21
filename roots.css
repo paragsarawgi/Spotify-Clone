@@ -19,6 +19,6 @@
     --glow: scale(1.05);
 
     /* buttons */
-    --rounded: 1rem;
     --btn-pad: 0.5rem 1rem;
+    --btn-round: 1rem;
 }

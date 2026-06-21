@@ -120,6 +120,8 @@ nav .nav-right #login a {
     color: var(--black-1);
     background-color: var(--white-1);
 }
+
+/* Nav Right Hover */
 nav .nav-right a:hover {
     color: var(--white-1);
     transform: var(--glow);
@@ -133,20 +135,146 @@ nav .nav-right #login a:hover {
 main {
     display: flex;
     gap: 1rem;
-    padding: 0.3rem 1.5rem;
+    padding: 0.3rem 1rem;
     height: 91vh;
     color: var(--white-1);
 }
+
+/* Left Box */
 main .left-box {
     background-color: var(--black-2);
     border-radius: 5px;
     height: 100%;
     width: 27.5vw;
-
 }
+/* header */
+main .left-box header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+main .left-box header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+main .left-box header button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--btn-pad);
+    border: 1px solid transparent;
+    border-radius: var(--btn-round);
+    background-color: var(--black-3);
+    color: var(--white-1);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+main .left-box header button #x {
+    display: none;
+}
+main .left-box header button #plus {
+    color: var(--white-2);
+}
+/* header hover */
+main .left-box header button:hover {
+    background-color: var(--black-4);
+    border: 1px solid var(--white-2);
+    #plus {
+        color: var(--white-1);
+    }
+    cursor: pointer;
+}
+/* boxes */
+main .left-box .boxes {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    gap: 1.75rem;
+    margin-bottom: 4rem;
+}
+main .left-box .boxes .box {
+    background-color: var(--black-3);
+    transition: all 0.3s ease;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+}
+main .left-box .boxes .box h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+main .left-box .boxes .box p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+main .left-box .boxes .box button {
+    padding: var(--btn-pad);
+    border: 1px solid transparent;
+    border-radius: var(--btn-round);
+    background-color: var(--white-1);
+    color: var(--black-1);
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: all 0.1s ease;
+}
+/* boxes hover */
+main .left-box .boxes .box button:hover {
+    background-color: var(--white-hover);
+    transform: var(--glow);
+    cursor: pointer;
+}
+/* footer */
+main .left-box .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+}
+/* footer links */
+main .left-box .footer .links a{
+    color: var(--white-2);
+    font-size: 0.7rem;
+    text-decoration: none;
+    transition: all 0.1s ease;
+    margin: 0.5rem;
+    display: inline-block; /* for enabling transform in anchor tags */
+}
+/* footer links hover */
+main .left-box .footer .links a:hover {
+    color: var(--white-1);
+    transform: var(--glow);
+    cursor: pointer;
+}
+/* footer language */
+main .left-box .footer .language {
+    margin-top: 1rem;
+}
+main .left-box .footer .language button {
+    padding: var(--btn-pad);
+    border: 1px solid var(--white-2);
+    border-radius: var(--btn-round);
+    background-color: var(--black-3);
+    color: var(--white-1);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: all 0.1s ease;
+}
+/* footer language hover */
+main .left-box .footer .language button:hover {
+    background-color: var(--black-4);
+    border: 1px solid var(--white-2);
+    transform: var(--glow);
+    cursor: pointer;
+}
+
+/* Right Box */
 main .right-box {
     background-color: var(--black-2);
     border-radius: 10px;
     height: 100%;
     width: 72.5vw;
 }
+
