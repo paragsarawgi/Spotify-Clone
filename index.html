@@ -109,16 +109,24 @@
             </div>
             <div class="play-controls">
                 <div class="play-control-buttons">
-                    <i class="fa-solid fa-shuffle" style="color: rgb(255, 255, 255);"></i>
-                    <i class="fa-solid fa-backward-step" style="color: rgb(255, 255, 255);"></i>
+                    <button id="shuffle-icon">
+                        <i class="fa-solid fa-shuffle" style="color: rgb(255, 255, 255);"></i>
+                    </button>
+                    <button id="previous-icon">
+                        <i class="fa-solid fa-backward-step" style="color: rgb(255, 255, 255);"></i>
+                    </button>
                     <button id="play-icon">
                         <svg viewBox="0 0 24 24" class="spotify-play-svg">
                             <circle cx="12" cy="12" r="12" fill="#ffffff" />
                             <path d="M10 7.5v9l7-4.5z" fill="#000000" />
                         </svg>
                     </button>
-                    <i class="fa-solid fa-forward-step" style="color: #ffffff;"></i>
-                    <i class="fa-solid fa-retweet" style="color: rgb(255, 255, 255);"></i>
+                    <button id="next-icon">
+                        <i class="fa-solid fa-forward-step" style="color: #ffffff;"></i>
+                    </button>
+                    <button id="repeat-icon">
+                        <i class="fa-solid fa-retweet" style="color: rgb(255, 255, 255);"></i>
+                    </button>
                 </div>
                 <div class="play-control-seek">
                     <input type="range" min="0" max="100" value="0" id="seek-bar">
