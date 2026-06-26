@@ -391,9 +391,127 @@ main .right-box .row .card-container .card:hover {
     align-items: center;
     justify-content: space-between;
 }
-#play-bar .play-controls button {
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
+/* play control */
+.play-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: 0.5rem;
+  padding: 8px 0;
+}
+
+/* buttons */
+.play-control-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.play-control-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.play-control-buttons button:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.play-control-buttons button:active {
+  transform: scale(0.95);
+}
+
+.play-control-buttons button i {
+  font-size: 1.2rem;
+  color: #ffffff !important; /* override your inline style sins */
+}
+
+/* play button */
+#play-icon {
+  opacity: 1 !important; /* always full opacity */
+}
+
+#play-icon:hover {
+  transform: scale(1.05);
+}
+#play-icon:active {
+  transform: scale(0.97);
+}
+.spotify-play-svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.15));
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+
+#play-icon:hover .spotify-play-svg {
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+/* seek bar */
+.play-control-seek {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+#seek-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 0.2rem;
+  border-radius: 2px;
+  background: #535353; /* unplayed track */
+  outline: none;
+  cursor: pointer;
+  transition: height 0.15s ease;
+}
+
+#seek-bar:hover {
+  height: 0.3rem; 
+}
+
+/* Thumb - hidden by default, shows on hover*/
+#seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#seek-bar:hover::-webkit-slider-thumb {
+  opacity: 1;
+}
+
+#seek-bar::-moz-range-thumb {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#seek-bar:hover::-moz-range-thumb {
+  opacity: 1;
 }
